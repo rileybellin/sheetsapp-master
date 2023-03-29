@@ -1,12 +1,12 @@
 function changeColumns() {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Taxpayer-Webinar-25K-by-ROLE-ID");
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("SHEET_TAB_NAME_HERE");
   sheet.moveColumns(sheet.getRange("B1"), 1);
 }
 
 
 function setSemiColon() {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Taxpayer-Webinar-25K-by-ROLE-ID");
-  const sheetRange = sheet.getRange("D1:D13798").getValues();
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("SHEET_TAB_NAME_HERE);
+  const sheetRange = sheet.getRange("VALUE_RANGE_HERE").getValues();
 
   for (var i = 2; i < sheetRange.length; i++) {
     sheet.getRange(i, 4).setValue(";" + sheetRange[i]);
@@ -14,8 +14,8 @@ function setSemiColon() {
 }
 
 function urlReformat() {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Taxpayer-Webinar-25K-by-ROLE-ID");
-  const sheetRange = sheet.getRange("U1:U13798").getValues();
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("SHEET_TAB_NAME_HERE");
+  const sheetRange = sheet.getRange("VALUE_RANGE_HERE").getValues();
   sheet.insertColumnAfter(20);
   var final = [];
   for (var i = 1; i < sheetRange.length; i++) {
@@ -93,8 +93,8 @@ function urlReformat() {
 }
 
 function jobTitleClean() {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Taxpayer-Webinar-25K-by-ROLE-ID");
-  const sheetRange = sheet.getRange("D1:D13798").getValues();
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("SHEET_TAB_NAME_HERE");
+  const sheetRange = sheet.getRange("VALUE_RANGE_HERE").getValues();
   sheet.insertColumnAfter(3);
   for (var i = 1; i < sheetRange.length; i++) {
     var value1 = sheetRange[i];
